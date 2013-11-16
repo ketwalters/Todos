@@ -3,21 +3,21 @@
 # 1. sort the following array in ascending order
 #   ["blake", "ashley", "scott"]
  array = ["blake", "ashley", "scott"]
-#array.sort!
+ array.sort!
  puts array
  puts " "
 # # 2. sort the following array in descending order
 # #   ["blake", "ashley", "scott"]
  array_2 = ["blake", "ashley", "scott"]
- array_2.sort!.reverse!
-puts array_2
-puts " "
+ array_2.sort.reverse!
+ puts array_2
+ puts " "
 # # 3. put the following array in reverse order
 # #   ["blake", "ashley", "scott"]
  array_3 = ["blake", "ashley", "scott"]
- array_3.reverse!
+ array_3.reverse
  puts array_3
-puts " "
+ puts " "
 #  4. grab the second element in the array
 #   ["blake", "ashley", "scott"]
 array_4 = ["blake", "ashley", "scott"]
@@ -34,21 +34,14 @@ puts " "
 #   ["blake", "scott", "ashley"]
 array_6 = ["blake", "ashley", "scott"]
 array_6.replace(["blake", "scott", "ashely"])
-#puts array_6
-#puts " "
+puts array_6
+puts " "
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 #   ["blake", "ashley", "scott"]
-#hash = Hash.new {|h,k| h[k] = []}
-#array_7 = 
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]]
-#hash_2 = {}
-#hash_3
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
-  #hash_3 = {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
-  #array_9 = []
-  #array_9 >> hash_3[|key,value| puts[:value]]
 # 10. add the following arrays
 #   [1,2,3] and [5,9,4]
 array_10 = [1,2,3] 
@@ -64,13 +57,8 @@ puts " "
 #puts array_11[5]
 # 11. sum all the numbers in the following array
 #   [11,4,7,8,9,100,134]
-#array_11 = [11,4,7,8,9,100,134]
-#array_11.each {|x| puts sum += x}
-# puts " "
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
 #   ["hand","feet", "knee", "table"]
-#array_12 = ["hand","feet", "knee", "table"]
-#array_12.each{|x| puts x + s}
 # CHALLENGE
 
 # word count
