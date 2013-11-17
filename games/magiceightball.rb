@@ -8,20 +8,27 @@
 #If the user answers yes, have it give a random message.
 #If the user says no, have it end.
 
-# puts "Do you want to shake the eight ball"
-# answer = gets.chomp
-# if answer == "yes"
-# 	puts "Ok, shake"
-# else
-# 	puts "That ok"
 
-def magic_ball(n)
-if n == "yes"
-	puts "Great"
-else
-	if n == "no"
-		break
-	end
+def magic_ball(answer)
+	messages = ["You have a bright future", "A new love is coming soon", "The future looks bleak"]
+    random_message = messages[rand(3)]
+    if answer == "yes"
+         puts random_message
+    else
+    if answer == "no"
+    end
+  end
 end
-new = magic_ball("yes")
-puts new
+
+while true
+puts "Do you want to shake the ball"
+answer = gets.chomp
+magic_ball(answer)
+if answer == "no"
+	break
+  end
+end
+
+
+
+	
