@@ -16,40 +16,40 @@ def deal_card
     card_array = [1,2,3,4,5,6,7,8,9,10,11]
     card_1 = card_array[rand(11)]
     puts card_1
-	card_2 = card_array[rand(11)]
+    card_2 = card_array[rand(11)]
     puts card_2
     total = card_1 + card_2
-    puts total
+    total
 end
-deal_card
 
 
+def hit(answer)
+    card_array = [1,2,3,4,5,6,7,8,9,10,11]
+        card = card_array[rand(11)]
+        puts card
+        card
+end
+
+turn_1 = deal_card
+puts turn_1
 puts "Do you want to hit or stay?"
-    answer = gets.chomp
-    card_3 = card_array[rand(11)]
-if answer == "hit" 
-    puts card_3 
-    puts card_3 + total
-    total_2 = card_3 + total
-    puts total_2
-    
-
-puts "Do you want another hit?"
-    answer_2 = gets.chomp
-    card_4 = card_array[rand(11)]
-    if answer_2 == "yes"
-    puts card_4 
-    total_3 = card_4 + total_2
-    puts total_3
-    else answer_2 == "stay"
+answer = gets.chomp
+turn_2 = hit(answer)
+total = turn_1 + turn_2
+if answer == "stay"
+    puts turn_1
+    if turn_1 <= 21
+        puts "You win"
+    else
+        puts "You lose"
+    end
+else
+    if answer == "hit"
+        puts total
+        if total <= 21
+            puts "You win"
+        else 
+            puts "You lose"
+        end
     end
 end
-
-
-
-
-
-
-
-
-
