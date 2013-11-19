@@ -15,8 +15,8 @@
 # # 3. put the following array in reverse order
 # #   ["blake", "ashley", "scott"]
  array_3 = ["blake", "ashley", "scott"]
- array_3.reverse
- puts array_3
+ array_reverse = array_3.reverse
+ puts array_reverse
  puts " "
 #  4. grab the second element in the array
 #   ["blake", "ashley", "scott"]
@@ -38,27 +38,62 @@ puts array_6
 puts " "
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 #   ["blake", "ashley", "scott"]
+hash = {}
+array.each do |name|
+	hash[name] = name[0..1] + "$" + name[3..length]
+end
+
+hash = {}
+array.each do |name|
+	hash[name] = gsub(/$/)
+
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]]
+my_number_array = [100, 1000, 5, 2, 3, 15, 1, 1, 100]
+
+
+
+
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
+teachers = {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
+winners = []
+teachers.each do {|k, v| v == winner ? winners << key "nil"}
+puts teachers
+
 # 10. add the following arrays
 #   [1,2,3] and [5,9,4]
 array_10 = [1,2,3] 
 array_10_2 = [5,9,4]
 puts array_10 + array_10_2
 puts " "
+
 # 11. find all words that begin with "a" in the following array
 #   ["apple", "orange", "pear", "avis", "arlo", "ascot" ]
-#array_11 = ["apple", "orange", "pear", "avis", "arlo", "ascot" ]
-#puts array_11[0]
-#puts array_11[3]
-#puts array_11[4]
-#puts array_11[5]
+array = ["apple", "orange", "pear", "avis", "arlo", "ascot" ]
+container = []
+array.each do |item|
+	if item[0] == 'a'
+		container << item
+	end
+	container
+end
 # 11. sum all the numbers in the following array
-#   [11,4,7,8,9,100,134]
+array =[11,4,7,8,9,100,134]
+sum = 0
+array.each do |x|
+	sum += x
+end
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
-#   ["hand","feet", "knee", "table"]
+array = ["hand","feet", "knee", "table"]
+array.each do |x|
+	x + "s"
+	next if x = x[1]
+  end
+end
+
+
+
 # CHALLENGE
 
 # word count
