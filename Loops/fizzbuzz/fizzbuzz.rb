@@ -2,14 +2,15 @@
 #	next if i == 0
 def fizz_buzz(i)
 if i % 3 == 0 && i % 5 == 0
-	puts "fizzbuzz"
+	"fizzbuzz"
 elsif i % 3 == 0 
-	puts "fizz"
+	 "fizz"
 elsif i % 5 == 0
-   puts "buzz"
+    "buzz"
 else
-	puts i  
+	 i  
   end
 end
 
-fizz_buzz(3)
+
+
