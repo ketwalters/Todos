@@ -39,12 +39,13 @@ def holidays_with_bbq(holiday_supplies)
   container = []
   holiday_supplies.each do |season, value|
       value.each do |holiday, supplies|
-        if supplies.include?("BBQ")
+        supplies.each do |i|
+          if i == "BBQ"
           container << holiday
           puts container
         end
       end
     end
   end
-
+end
 holidays_with_bbq(holiday_supplies)
