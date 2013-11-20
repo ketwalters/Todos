@@ -20,23 +20,31 @@ holiday_supplies[:spring][:memorial_day] << "Paper plates"
 holiday_supplies[:fall][:Halloween] = ["Pumpkin"]
 
 def winter_suppliers(holiday_supplies)
-  holiday_supplies[:winter].each do |key, value|
-  value
- end
+  container = []
+  holiday_supplies.each do |season, value|
+    if season == :winter
+      value.each do |holiday, supplies|
+        supplies.each do |stuff|
+          container << stuff
+          puts container
+        end
+      end
+    end
+  end
 end
 winter_suppliers(holiday_supplies)
 
 
 def holidays_with_bbq(holiday_supplies)
   container = []
-  holiday_supplies.each do |key, value|
-    value.each do |k, v|
-        if v.include?("BBQ")
-          container << v
+  holiday_supplies.each do |season, value|
+      value.each do |holiday, supplies|
+        if supplies.include?("BBQ")
+          container << holiday
+          puts container
         end
       end
     end
-    container
   end
 
 holidays_with_bbq(holiday_supplies)

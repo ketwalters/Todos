@@ -3,25 +3,25 @@
 # 1. sort the following array in ascending order
 #   ["blake", "ashley", "scott"]
  array = ["blake", "ashley", "scott"]
- array.sort!
- puts array
+ array_sort = array.sort
+ puts array_sort
  puts " "
 # # 2. sort the following array in descending order
 # #   ["blake", "ashley", "scott"]
- array_2 = ["blake", "ashley", "scott"]
- array_2.sort.reverse!
- puts array_2
+ array_r_sort = ["blake", "ashley", "scott"]
+ array_r_sort.sort.reverse
+ puts array_r_sort
  puts " "
 # # 3. put the following array in reverse order
 # #   ["blake", "ashley", "scott"]
- array_3 = ["blake", "ashley", "scott"]
- array_reverse = array_3.reverse
+ array = ["blake", "ashley", "scott"]
+ array_reverse = array.reverse
  puts array_reverse
  puts " "
 #  4. grab the second element in the array
 #   ["blake", "ashley", "scott"]
-array_4 = ["blake", "ashley", "scott"]
-puts array_4[1]
+array = ["blake", "ashley", "scott"]
+puts array[1]
 puts " "
 # 5. print each element of the array to the console
 #   ["blake", "ashley", "scott"]
@@ -37,22 +37,27 @@ array_6.replace(["blake", "scott", "ashely"])
 puts array_6
 puts " "
 # 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
-#   ["blake", "ashley", "scott"]
+array = ["blake", "ashley", "scott"]
 hash = {}
-array.each do |name|
-	hash[name] = name[0..1] + "$" + name[3..length]
-end
-
-hash = {}
-array.each do |name|
-	hash[name] = gsub(/$/)
 
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]]
-my_number_array = [100, 1000, 5, 2, 3, 15, 1, 1, 100]
-
-
-
+number_array = [100, 1000, 5, 2, 3, 15, 1, 1, 100]
+container = []
+container_2 = []
+number_array.each do |num|
+  if num > 10
+    container << num
+  else
+    if num < 10
+      container_2 << num
+      end
+    end
+  end
+hash = {}
+hash[:greater_than_10] = container
+hash[:less_than_10] = container_2
+puts hash
 
 # 9. find all the winners and put them in an array
 #   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
