@@ -9,5 +9,14 @@
 # e.g make_list(["ich", "ni", "san"]) #=> ["1. ich", "2. ni", "3. san"]
 
 def make_list(array)
-	array.to_s
+	y = []
+	number = 0
+	array.each do |element|
+		number += 1
+		y << "#{number}. #{element}"
+	end
+	y
 end
+
+
+

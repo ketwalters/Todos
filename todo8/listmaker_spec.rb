@@ -1,7 +1,7 @@
-require_relative "list_maker"
+require_relative "./list_maker"
 
-describe "make_list" do
+describe "#make_list" do
   it "should return an array into a numbered string" do
-    make_list([bat, cat, mat]).should eq(["bat", "cat", "mat"])
+    expect (make_list([1, 2, 3])).should eq(["1. 1", "2.2", "3.3"])
   end
 end
