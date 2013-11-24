@@ -1,14 +1,14 @@
 require_relative "./deli_counter"
 
-describe "#take_a_number" do
+describe Deli, "#take_a_number" do
 	it "should return a name" do
-		expect (take_a_number("Keturah", "Mary")).should eq("1.Keturah", "2.Mary")
+		expect (Deli.new.take_a_number(["Keturah", "Mary"])).should eq(["1. Keturah", "2. Mary"])
 	end
 
-		describe "#now_servng" do
-			it "should delete first name in array and return name"
-			expect(now_servng(["Keturah", "Mary", "Bob"]).should eq(["Mary", "Bob"])
-		end
-
+	describe Deli, "#now_servng" do
+		it "should delete first name in array and return name" do
+		expect(Deli.new.now_servng(["1. Keturah", "2. Mary", "3. Bob"])).should eq(["2. Mary", "3. Bob"])
 	end
+
+end
 
