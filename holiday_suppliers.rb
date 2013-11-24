@@ -24,13 +24,11 @@ def winter_suppliers(holiday_supplies)
   holiday_supplies.each do |season, value|
     if season == :winter
       value.each do |holiday, supplies|
-        supplies.each do |stuff|
-          container << stuff
-          puts container
-        end
+        container << supplies
       end
     end
   end
+container
 end
 winter_suppliers(holiday_supplies)
 
@@ -38,14 +36,13 @@ winter_suppliers(holiday_supplies)
 def holidays_with_bbq(holiday_supplies)
   container = []
   holiday_supplies.each do |season, value|
-      value.each do |holiday, supplies|
-        supplies.each do |i|
-          if i == "BBQ"
-          container << holiday
-          puts container
-        end
+    value.each do |holiday, supplies|
+      if supplies.include? "BBQ"
+        container << holiday
       end
     end
   end
+  container
 end
 holidays_with_bbq(holiday_supplies)
+

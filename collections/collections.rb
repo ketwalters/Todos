@@ -5,29 +5,24 @@
  array = ["blake", "ashley", "scott"]
  array_sort = array.sort
  puts array_sort
- puts " "
 # # 2. sort the following array in descending order
 # #   ["blake", "ashley", "scott"]
  array_r_sort = ["blake", "ashley", "scott"]
  array_r_sort.sort.reverse
  puts array_r_sort
- puts " "
 # # 3. put the following array in reverse order
 # #   ["blake", "ashley", "scott"]
  array = ["blake", "ashley", "scott"]
  array_reverse = array.reverse
  puts array_reverse
- puts " "
 #  4. grab the second element in the array
 #   ["blake", "ashley", "scott"]
 array = ["blake", "ashley", "scott"]
 puts array[1]
-puts " "
 # 5. print each element of the array to the console
 #   ["blake", "ashley", "scott"]
 array_5 = ["blake", "ashley", "scott"]
 array_5.each{|element| puts element}
-puts " "
 # 6. create a new array in the following order
 #   ["blake", "ashley", "scott"] 
 #   should transform into
@@ -35,11 +30,15 @@ puts " "
 array_6 = ["blake", "ashley", "scott"]
 array_6.replace(["blake", "scott", "ashely"])
 puts array_6
-puts " "
-# 7. using the following array create a hash where the elements in the array are the keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
+# 7. using the following array create a hash where the elements in the array are the 
+#keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
 array = ["blake", "ashley", "scott"]
 hash = {}
-
+array.each do |name|
+  hash[name] = name
+  name[2] = "$"
+end
+puts hash
 # 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]]
 number_array = [100, 1000, 5, 2, 3, 15, 1, 1, 100]
@@ -60,11 +59,14 @@ hash[:less_than_10] = container_2
 puts hash
 
 # 9. find all the winners and put them in an array
-#   {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
-teachers = {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
-winners = []
-teachers.each do {|k, v| v == winner ? winners << key "nil"}
-puts teachers
+hash = {:blake => "winner", :ashley => "loser", :caroline => "loser", :carlos => "winner"}
+array = []
+hash.each do |key, value|
+  if hash[key] == "winner"
+    array << key
+  end
+end
+puts array
 
 # 10. add the following arrays
 #   [1,2,3] and [5,9,4]
@@ -85,16 +87,13 @@ array.each do |item|
 end
 # 11. sum all the numbers in the following array
 array =[11,4,7,8,9,100,134]
-sum = 0
-array.each do |x|
-	sum += x
-end
+array.inject{|sum,x| sum + x }
+
 # 12. Add an "s" to each word in the array except for the 2nd element in the array?
 array = ["hand","feet", "knee", "table"]
-array.each do |x|
-	x + "s"
-	next if x = x[1]
-  end
+array.each do |word|
+word << "s"
+next if word == array[1]
 end
 
 
