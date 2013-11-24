@@ -1,20 +1,21 @@
 class Deli
 
 	def initialize
-		@line = []
+		@line = ["Mary", "Jane", "Keisha"]
 
-	def take_a_number (name)
+	def take_a_number 
 		x = 0
 		name.each do |element|
-			x += 1
-		@line << name
+			@line << element += 1
 	end
 
 	def now_serving
-			@line.delete[0]
-		end
-		name
+		np = @line.delete_at[0]
+		puts np
 	end
 
 end
+
+deli_1 = Deli.new
+deli_1.take_a_number
 
