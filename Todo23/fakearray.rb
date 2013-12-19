@@ -24,12 +24,12 @@ end
 
 class FakeArray
 
-  def each
-    
+  def each(array)
+    array.to_ary
   end
 
-  def first
-    
+  def first(array)
+    array.to_ary.first
   end
 
   def []()
