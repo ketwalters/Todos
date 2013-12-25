@@ -7,13 +7,13 @@
 
 #count(test) #=> { 'cat' => 1, 'dog' => 1, 'fish' => 2 })
 
-test = ['cat', 'dog', 'fish', 'fish']
 def count(array)
 	hash = {}
 	array.each do |element|
-		count = 0
-		hash[element] = count += 1
+		hash[element] = array.count(element)
 	end
 hash
 end
+
+test = ['cat','dog','fish','fish']
 puts count(test)
