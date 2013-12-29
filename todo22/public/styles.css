@@ -1,0 +1,13 @@
+h1 {
+  color :#FFFFFF;
+  text-align: center;
+  font-size: 50px;
+  font-family: arial,sans-serif;
+  font-family: 'Varela Round', serif;
+  position: relative;
+  top: 180px;
+}
+
+body {
+  background-color: #BC8F8F;
+}
