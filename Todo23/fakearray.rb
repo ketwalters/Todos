@@ -6,35 +6,49 @@
 
 #I should get the same result if i do
 
-container = []
-[1,2,3].each do |element|
-  container << element + 1
-end
+#container = []
+#[1,2,3].each do |element|
+#  container << element + 1
+#end
 
 #as if i use your class like so...
 
-fakearray = FakeArray.new
-container = []
-fakearray.each do |element|
-  container << element + 1
-end
+#fakearray = FakeArray.new
+#container = []
+#fakearray.each do |element|
+#  container << element + 1
+#end
 
 #Note: I've intentionally omitted a step here where you'd have to 
 #somehow tell your class that were using an array of 1,2,3
 
 class FakeArray
 
-  def each(array)
-    array.to_ary
+  attr_accessor :array
+
+  def initialize(array)
+    @fakearray = array
   end
 
-  def first(array)
-    array.to_ary.first
+  def each
+    @fakearray.each do |element| 
+      yield element if block_given?
+    end
+  end
+
+  def first
   end
 
   def []()
     
   end
 
+end
+
+fakearray = FakeArray.new([5,6])
+
+container = []
+fakearray.each do |element|
+  container << element + 1
 end
 

@@ -31,7 +31,8 @@ array_6 = ["blake", "ashley", "scott"]
 array_6.replace(["blake", "scott", "ashely"])
 puts array_6
 # 7. using the following array create a hash where the elements in the array are the 
-#keys and the values of the hash are those elements with the 3rd character changed to a dollar sign.
+#keys and the values of the hash are those elements with the 3rd character changed 
+#to a dollar sign.
 array = ["blake", "ashley", "scott"]
 hash = {}
 array.each do |name|
@@ -39,7 +40,8 @@ array.each do |name|
   name[2] = "$"
 end
 puts hash
-# 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values will be an array of any numbers greater than 10 or less than 10 in the following array
+# 8. create a hash with two keys, "greater_than_10", "less_than_10" and their values 
+#will be an array of any numbers greater than 10 or less than 10 in the following array
 #   [100, 1000, 5, 2, 3, 15, 1, 1, 100 ]]
 number_array = [100, 1000, 5, 2, 3, 15, 1, 1, 100]
 container = []

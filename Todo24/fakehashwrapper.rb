@@ -15,5 +15,10 @@
 #descending alphabetized array.
 
 class FakeHashWrapper
-	
+
+	attr_reader :hash
+	def initialize(hash ={:blake => "the best", :ashley => "awesome"})
+		
+	end
+
 end

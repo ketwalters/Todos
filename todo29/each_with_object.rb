@@ -6,12 +6,10 @@
 #Code:
 
 def even_sum(arr)
-  arr.each_with_object([]) do |array,string| 
-  	array << str.reverse if str.split(//).count % 2 == 0
+  arr.each_with_object([]) do |str, array| 
+  	array << str.reverse if str.split(//).count % 2 == 0  	
   	array
   end
 end
 
-
-
-even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
+puts even_sum(["cat", "dog", "bird", "fish"]) #=> ["drib", "hsif"]
