@@ -1,7 +1,11 @@
 #Separate numbers with a comma each three digits.
  
 def separate_with_comma(n)
-  #code goes here
+	array = n.to_a.to_s.split(//)
+	if array.length > 1
+		array.insert(-4, ",")
+		array.join
+	end
 end
  
 separate_with_comma(1) #=> "1" 
