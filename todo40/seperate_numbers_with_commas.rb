@@ -1,12 +1,12 @@
 #Separate numbers with a comma each three digits.
  
 def separate_with_comma(n)
-	array = n.to_s.split(//)
-	if array.length > 3
-		array.insert(-4, ",")
-		array.join
+	string = n.to_s.split(//)
+	if string.length > 3
+		string.insert(-4, ",")
+		string.join
 	else
-		array.join
+		string.join
 	end
 end
  

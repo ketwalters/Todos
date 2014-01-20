@@ -1,0 +1,16 @@
+%ul
+  %li
+    = @post.body
+    = @post.title
+    = @post.age_of_submitter
+
+%h1 Here's where you submit a comment!
+= form_for([@post, Comment.new]) do |f|
+  = f.text_area :body 
+  = f.submit "submit your comment"
+  
+%h1 Here are the Comments
+%ul
+  - @post.comments.each do |comment|
+    %li
+      = comment.body
