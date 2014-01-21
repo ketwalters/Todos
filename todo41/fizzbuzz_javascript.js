@@ -6,5 +6,5 @@ for (i = 0; i <= 100; i = i + 1) {
 	if (i % 5 == 0)
 		console.log("buzz");
 	else
-		print(i);
+		console.log(i);
 }
