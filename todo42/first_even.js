@@ -3,11 +3,10 @@
 //This is an old todo we did in Ruby, please rewrite your answer in javascript
  
 function getEvenNumbers(numbersArray){
-	return numbersArray[0];
 	function getNumbers(element){
 		return element % 2 === 0;
 	}
-	return numbersArray.filter(getNumbers);
+	return numbersArray.filter(getNumbers)[0];
 }
 
 
